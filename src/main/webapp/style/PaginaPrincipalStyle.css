@@ -1,0 +1,52 @@
+.title {
+    font-weight: 400;
+    color: #1A1919;
+}
+
+.button-container {
+    background-color: #E8E8E8; /* Fondo gris claro */
+    padding: 40px; /* Más espaciado interno */
+    border-radius: 15px; /* Bordes más redondeados */
+    width: 80%; /* Contenedor más grande */
+    max-width: 600px; /* Tamaño máximo */
+
+}
+
+.btn-custom {
+    background-color: #AF71C7; /* Color verde personalizado */
+    color: white;
+    width: 150px; /* Ancho más grande */
+    height: 50px; /* Altura más grande */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1.2rem;
+}
+
+.btn-custom:hover {
+    background-color: #6B417B; /* Color al pasar el cursor */
+    color: white;
+}
+
+.btn-custom:active{
+    background-color: #6B417B; /* Color de fondo personalizado */
+    transform: scale(0.95); /* Efecto de "presionado" */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+
+
+.row.g-4 {
+    row-gap: 30px; /* Más espacio entre filas */
+}
+
+.paragraph  {
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.paragraph-desc{
+    font-size: 1.5rem; /* Aumenta el tamaño de la fuente */
+    line-height: 1.8;
+    margin-bottom: 0px;
+}

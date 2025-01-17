@@ -1,0 +1,6 @@
+persistencia\ConexionJDBC.class
+com\mycompany\proyectocrud\resources\JakartaEE10Resource.class
+com\mycompany\proyectocrud\JakartaRestConfiguration.class
+logica\UsuarioVO.class
+logica\UsuarioDAO.class
+servlet\SvCrearUsuario.class
