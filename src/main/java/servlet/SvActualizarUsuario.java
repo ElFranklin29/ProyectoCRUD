@@ -37,6 +37,8 @@ public class SvActualizarUsuario extends HttpServlet {
 
         UsuarioVO usuarioByNumeroDoc = new UsuarioVO();
 
+        
+        
         try {
             usuarioByNumeroDoc = usuarioDAO.TraerUsuarioByNumeroDoc(numeroDoc);
         } catch (SQLException ex) {
@@ -52,11 +54,9 @@ public class SvActualizarUsuario extends HttpServlet {
   
         
         if (usuarioByNumeroDoc.getNombre() == null) {
-           
+
             response.sendRedirect("AlertErrorActualizar.jsp");
-           
-            
-            
+
         } else {
             response.sendRedirect("ActualizarUsuario.jsp");
 

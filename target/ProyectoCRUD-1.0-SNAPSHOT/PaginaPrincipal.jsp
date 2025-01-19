@@ -37,7 +37,9 @@
                         <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#miModal">ACTUALIZAR</button>
                     </div>
                     <div class="col-6 d-flex justify-content-center">
+                        <a href="EliminarUsuario.jsp">
                         <button class="btn btn-custom">ELIMINAR</button>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -63,8 +63,6 @@ public class UsuarioDAO {
 
             statement.setInt(1, numeroDoc);
             ResultSet set = statement.executeQuery();
-            
-           
 
             while (set.next()) {
                 usuario.setNombre(set.getString("nombre"));
@@ -78,32 +76,40 @@ public class UsuarioDAO {
             System.out.println("Error al trar usuario by numeroDoc" + ex.getMessage());
         }
 
-        
-
         return usuario;
     }
-    
-    
-    public void ActualizarUsuario(UsuarioVO usuario, int numeroDocActualizar) throws SQLException{
-        String query="UPDATE usuarios SET nombre=?, apellido=?, numerodoc=?, correo=?, "
+
+    public void ActualizarUsuario(UsuarioVO usuario, int numeroDocActualizar) throws SQLException {
+        String query = "UPDATE usuarios SET nombre=?, apellido=?, numerodoc=?, correo=?, "
                 + "fechaNacimiento=? WHERE numerodoc=?";
-        
-        try(Connection conexion = ConexionJDBC.conectar(); PreparedStatement statement = conexion.prepareStatement(query)){
-           statement.setString(1, usuario.getNombre());
-           statement.setString(2, usuario.getApellido());
-           statement.setInt(3, usuario.getNumeroId());
-           statement.setString(4, usuario.getCorreo());
-           statement.setDate(5, usuario.getFechaNacimiento());
-           
-           statement.setInt(6, numeroDocActualizar);
-           
-           statement.executeUpdate();
-           
-            
-        }catch(SQLException ex){
-            System.out.println("Erro al actualizar usuario"+ ex.getMessage());
+
+        try (Connection conexion = ConexionJDBC.conectar(); PreparedStatement statement = conexion.prepareStatement(query)) {
+            statement.setString(1, usuario.getNombre());
+            statement.setString(2, usuario.getApellido());
+            statement.setInt(3, usuario.getNumeroId());
+            statement.setString(4, usuario.getCorreo());
+            statement.setDate(5, usuario.getFechaNacimiento());
+
+            statement.setInt(6, numeroDocActualizar);
+
+            statement.executeUpdate();
+
+        } catch (SQLException ex) {
+            System.out.println("Erro al actualizar usuario" + ex.getMessage());
         }
-    
+
+    }
+
+    public void EliminarUsuario(int numeroDoc) throws SQLException {
+        String query = "DELETE FROM usuarios WHERE numerodoc = ?";
+
+        try (Connection conexion = ConexionJDBC.conectar(); PreparedStatement statement = conexion.prepareCall(query)) {
+            statement.setInt(1, numeroDoc);
+            statement.executeUpdate();
+            System.out.println("Usuario eliminado correctamente");
+
+        }
+
     }
 
 }
