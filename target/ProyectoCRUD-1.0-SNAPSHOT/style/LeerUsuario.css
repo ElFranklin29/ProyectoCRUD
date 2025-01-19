@@ -1,0 +1,28 @@
+.title {
+    font-weight: 400;
+    color: #1A1919;
+
+    margin-top: 5%;
+}
+
+.btn-custom {
+    background-color: #AF71C7; /* Color verde personalizado */
+    color: white;
+    width: 150px; /* Ancho más grande */
+    height: 50px; /* Altura más grande */
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+
+}
+
+.btn-custom:hover {
+    background-color: #AF71C7; /* Color al pasar el cursor */
+    color: white;
+}
+
+.btn-custom:active{
+    background-color: #AF71C7; /* Color de fondo personalizado */
+}

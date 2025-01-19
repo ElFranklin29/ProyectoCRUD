@@ -22,12 +22,30 @@
     font-size: 1.2rem;
 }
 
+.btn-modal{
+     background-color: #AF71C7; /* Color verde personalizado */
+    color: white;
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
 .btn-custom:hover {
     background-color: #6B417B; /* Color al pasar el cursor */
     color: white;
 }
 
 .btn-custom:active{
+    background-color: #6B417B; /* Color de fondo personalizado */
+    transform: scale(0.95); /* Efecto de "presionado" */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+.btn-modal:hover {
+    background-color: #6B417B; /* Color al pasar el cursor */
+    color: white;
+}
+
+.btn-modal:active{
     background-color: #6B417B; /* Color de fondo personalizado */
     transform: scale(0.95); /* Efecto de "presionado" */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más intensa */

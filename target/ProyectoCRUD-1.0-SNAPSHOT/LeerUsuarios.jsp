@@ -1,3 +1,8 @@
+<%@page import="java.time.format.DateTimeFormatter"%>
+<%@page import="java.time.LocalDate"%>
+<%@page import="java.sql.Date"%>
+<%@page import="java.util.List"%>
+<%@page import="logica.UsuarioVO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="/components/navbar.jsp" %>
 
@@ -5,45 +10,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <link href="style/LeerUsuario.css" rel="stylesheet" type="text/css"/>
         <title>Leer</title>
 
-        <style>
-            .title {
-                font-weight: 400;
-                color: #1A1919;
-
-                margin-top: 5%;
-            }
-
-            .btn-custom {
-                background-color: #AF71C7; /* Color verde personalizado */
-                color: white;
-                width: 150px; /* Ancho más grande */
-                height: 50px; /* Altura más grande */
-                border: none; /* Sin bordes */
-                border-radius: 5px; /* Bordes redondeados */
-                font-size: 1.2rem;
-                margin-bottom: 2rem;
-                margin-top: 1.5rem;
-
-            }
-
-            .btn-custom:hover {
-                background-color: #AF71C7; /* Color al pasar el cursor */
-                color: white;
-            }
-
-            .btn-custom:active{
-                background-color: #AF71C7; /* Color de fondo personalizado */
-            }
-
-
-        </style>    
-
     </head>
+
 
     <body class="d-flex flex-column min-vh-100">
 
@@ -53,6 +26,11 @@
 
             <button  class="btn btn-custom">Leer</button>
 
+            <%
+                List<UsuarioVO> listaUsuarios = (List) request.getSession().getAttribute("listaUsuarios");
+
+
+            %>
             <table class="table">
                 <thead>
                     <tr>
@@ -66,21 +44,30 @@
                 </thead>
                 <tbody>
 
+                    <%                        int cont = 0;
+                        for (UsuarioVO usuario : listaUsuarios) {
+                            cont++;
+
+                    %>
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Fraklin</td>
-                        <td>Castañeda</td>
-                        <td>103293785</td>
-                        <td>franklin@gmail.com</td>
-                        <td>25-08-2025</td>
+                        <th scope="row"><%=cont%></th>
+                        <td><%=usuario.getNombre()%></td>
+                        <td><%=usuario.getApellido()%></td>
+                        <td><%=String.valueOf(usuario.getNumeroId())%></td>
+                        <td><%=usuario.getCorreo()%></td>
+                        <td><%=usuario.getFechaNacimiento()%></td>
                     </tr>
+
+                    <%}%>
 
 
 
                 </tbody>
             </table>
+            <a href="PaginaPrincipal.jsp">
+                <button  class="btn btn-custom">Volver</button>
 
-            <button  class="btn btn-custom">Volver</button>
+            </a>
         </div>
     </body>
 
