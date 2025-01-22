@@ -37,22 +37,22 @@
                 <div class="row">
                     <div class="col-6 text-center mb-3 custom-col">
 
-                        <p class="mb-0"><a href="https://www.figma.com/design/HuElvRvzsGPwJUvKRAGwag/Proyecto-CRUD?node-id=0-1&t=ADIDfqyQ6iROVSaX-1" class="no-style-link">Diseño en <strong class="strong-items">FIGMA</strong></a></p>
+                        <p class="mb-0"><a target="_blank" href="https://www.figma.com/design/HuElvRvzsGPwJUvKRAGwag/Proyecto-CRUD?node-id=0-1&t=ADIDfqyQ6iROVSaX-1" class="no-style-link">Diseño en <strong class="strong-items">FIGMA</strong></a></p>
 
                     </div>
                     <div class="col-6 text-center mb-3 custom-col">
 
-                        <p class="mb-0"><a href="https://github.com/ElFranklin29/ProyectoCRUD/tree/master" class="no-style-link">Ver <strong class="strong-items">GITHUB</strong> </a></p>
+                        <p class="mb-0"><a target="_blank" href="https://github.com/ElFranklin29/ProyectoCRUD/tree/master" class="no-style-link" >Ver <strong class="strong-items">GITHUB</strong> </a></p>
 
                     </div>
                     <div class="col-6 text-center custom-col">
 
-                        <p class="mb-0"> <a href="https://worried-feeling-313.notion.site/Proyecto-1-1754da0a962b80158907c90691ea7cf4?pvs=4" class="no-style-link">Documentacion en <strong class="strong-items"> NOTION</strong> </a></p>
+                        <p class="mb-0"> <a target="_blank"  href="https://worried-feeling-313.notion.site/Proyecto-1-1754da0a962b80158907c90691ea7cf4?pvs=4" class="no-style-link">Documentacion en <strong class="strong-items"> NOTION</strong> </a></p>
 
                     </div>
                     <div class="col-6 text-center custom-col">
 
-                        <p class="mb-0"><a href="url" class="no-style-link">Ver <strong class="strong-items">PORTAFOLIO PERSONAL</strong>   </a></p>
+                        <p class="mb-0"><a target="_blank" href="url" class="no-style-link">Ver <strong class="strong-items">PORTAFOLIO PERSONAL</strong>   </a></p>
 
                     </div>
                 </div>
