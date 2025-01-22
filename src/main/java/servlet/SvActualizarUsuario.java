@@ -55,7 +55,7 @@ public class SvActualizarUsuario extends HttpServlet {
         
         if (usuarioByNumeroDoc.getNombre() == null) {
 
-            response.sendRedirect("AlertErrorActualizar.jsp");
+            response.sendRedirect("Alerts/AlertErrorActualizar.jsp");
 
         } else {
             response.sendRedirect("ActualizarUsuario.jsp");
@@ -99,7 +99,7 @@ public class SvActualizarUsuario extends HttpServlet {
             Logger.getLogger(SvActualizarUsuario.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        response.sendRedirect("PaginaPrincipal.jsp");
+        response.sendRedirect("Alerts/AlertActualizadoCorrectamente.jsp");
 
     }
 

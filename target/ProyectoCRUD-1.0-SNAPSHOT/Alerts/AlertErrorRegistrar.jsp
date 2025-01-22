@@ -3,13 +3,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registrado</title>
+        <title>Error</title>
     </head>
     <body>
         <script>
-            alert('¡Usuario creado correctamente!');
+            alert('¡El numero de documento ya se encuentra registrado:(! Digite uno nuevo');
             // Redirigir después de aceptar el alert
-            window.location.href = 'PaginaPrincipal.jsp';
+           window.location.href = '../PaginaPrincipal.jsp';
         </script>
     </body>
 </html>

@@ -45,12 +45,12 @@ public class SvEliminarUsuario extends HttpServlet {
         }
 
         if (usuarioEliminar.getNombre() == null) {
-            response.sendRedirect("AlertErrorActualizar.jsp");
+            response.sendRedirect("Alerts/AlertErrorActualizar.jsp");
 
         } else {
             try {
                 usuarioDAO.EliminarUsuario(numeroDocEliminar);
-                response.sendRedirect("AlertUsuarioEliminado.jsp");
+                response.sendRedirect("Alerts/AlertUsuarioEliminado.jsp");
             } catch (SQLException ex) {
                 Logger.getLogger(SvEliminarUsuario.class.getName()).log(Level.SEVERE, null, ex);
             }

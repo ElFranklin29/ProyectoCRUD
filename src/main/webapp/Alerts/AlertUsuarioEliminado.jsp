@@ -3,20 +3,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Error</title>
+        <title>Usuario Eliminado</title>
     </head>
     <body>
-
-
-
-        <script>
-            alert('¡UPS! No se ha encontrado usuario, vuelve a intentarlo digitando un valor registrado.');
+         <script>
+            alert('¡Usuario eliminado correctamente!');
             // Redirigir después de aceptar el alert
-            window.location.href = 'PaginaPrincipal.jsp';
+            window.location.href = '../PaginaPrincipal.jsp';
         </script>
-
-
-
-
     </body>
 </html>

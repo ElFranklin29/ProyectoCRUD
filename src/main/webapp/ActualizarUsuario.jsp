@@ -78,12 +78,7 @@
 
         </div>
 
-        <script>
-            const formulario = document.getElementById('form');
-            formulario.addEventListener('submit', function (event) {
-                alert('¡Usuario Actualizado Correctamente!');
-            });
-        </script>
+        
         
         
         <%@include file="Footer.jsp" %>

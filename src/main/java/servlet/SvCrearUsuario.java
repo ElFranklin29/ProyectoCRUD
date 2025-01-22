@@ -71,10 +71,11 @@ public class SvCrearUsuario extends HttpServlet {
                     throw new RuntimeException("Error llamando Crear usuario", ex);
                 }
                 
-                response.sendRedirect("AlertUsuarioRegistrado.jsp");
+                response.sendRedirect("Alerts/AlertUsuarioRegistrado.jsp");
+            
             } else {
                 
-                response.sendRedirect("AlertErrorRegistrar.jsp");
+                response.sendRedirect("Alerts/AlertErrorRegistrar.jsp");
                 
             }
             

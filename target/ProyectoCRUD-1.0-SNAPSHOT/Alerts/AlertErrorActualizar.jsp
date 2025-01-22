@@ -6,10 +6,17 @@
         <title>Error</title>
     </head>
     <body>
+
+
+
         <script>
-            alert('¡El numero de documento ya se encuentra registrado:(! Digite uno nuevo');
+            alert('¡UPS! No se ha encontrado usuario, vuelve a intentarlo digitando un valor registrado.');
             // Redirigir después de aceptar el alert
-            window.location.href = 'CrearUsuario.jsp';
+            window.location.href = '../PaginaPrincipal.jsp';
         </script>
+
+
+
+
     </body>
 </html>
