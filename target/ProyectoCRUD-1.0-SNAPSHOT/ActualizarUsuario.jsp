@@ -84,6 +84,9 @@
                 alert('¡Usuario Actualizado Correctamente!');
             });
         </script>
+        
+        
+        <%@include file="Footer.jsp" %>
     </body>
 
 </html>

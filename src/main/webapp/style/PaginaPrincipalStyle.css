@@ -1,7 +1,10 @@
 .title {
     font-weight: 400;
     color: #1A1919;
+    margin-top: 3rem;
 }
+
+
 
 .button-container {
     background-color: #E8E8E8; /* Fondo gris claro */
@@ -9,7 +12,7 @@
     border-radius: 15px; /* Bordes más redondeados */
     width: 80%; /* Contenedor más grande */
     max-width: 600px; /* Tamaño máximo */
-
+    margin-bottom: 2.5rem;
 }
 
 .btn-custom {
@@ -23,7 +26,7 @@
 }
 
 .btn-modal{
-     background-color: #AF71C7; /* Color verde personalizado */
+    background-color: #AF71C7; /* Color verde personalizado */
     color: white;
     border: none; /* Sin bordes */
     border-radius: 5px; /* Bordes redondeados */

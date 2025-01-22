@@ -10,6 +10,8 @@ import java.sql.Date;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import logica.UsuarioDAO;
 import logica.UsuarioVO;
 
@@ -40,7 +42,7 @@ public class SvCrearUsuario extends HttpServlet {
         String apellido = request.getParameter("apellido");
         int numeroDoc = Integer.parseInt(request.getParameter("numeroDoc"));
         String correo = request.getParameter("correo");
-        
+
         try {
             String fechaNac = request.getParameter("fechaNac");
 
@@ -58,14 +60,35 @@ public class SvCrearUsuario extends HttpServlet {
         usuarioNuevo.setNumeroId(numeroDoc);
         usuarioNuevo.setCorreo(correo);
 
+        
         try {
-            usuarioDAO.CrearUsuario(usuarioNuevo);
+            //COMPROBAR SI EL NUERO DOC YA ESTA REGISTRADO
+            if (ComprobarUsuario(numeroDoc).getNombre() == null) {
+                try {
+                    //SI NO ESTA REGISTRADO SE CREA
+                    usuarioDAO.CrearUsuario(usuarioNuevo);
+                } catch (SQLException ex) {
+                    throw new RuntimeException("Error llamando Crear usuario", ex);
+                }
+                
+                response.sendRedirect("AlertUsuarioRegistrado.jsp");
+            } else {
+                
+                response.sendRedirect("AlertErrorRegistrar.jsp");
+                
+            }
+            
         } catch (SQLException ex) {
-            throw new RuntimeException("Error llamando Crear usuario", ex);
+            Logger.getLogger(SvCrearUsuario.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        response.sendRedirect("PaginaPrincipal.jsp");
+    }
 
+    public UsuarioVO ComprobarUsuario(int numeroDoc) throws SQLException {
+        UsuarioVO comprobarUsuario = new UsuarioVO();
+        comprobarUsuario = usuarioDAO.TraerUsuarioByNumeroDoc(numeroDoc);
+        
+        return  comprobarUsuario;
     }
 
     @Override

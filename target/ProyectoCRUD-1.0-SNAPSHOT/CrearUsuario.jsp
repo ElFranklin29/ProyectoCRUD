@@ -47,11 +47,7 @@
 
         </div>
 
-        <script>
-            const formulario = document.getElementById('form');
-            formulario.addEventListener('submit', function (event) {
-                alert('¡Usuario creado correctamente!');
-            });
-        </script>
+        
+        <%@include file="Footer.jsp" %>
     </body>
 </html>
